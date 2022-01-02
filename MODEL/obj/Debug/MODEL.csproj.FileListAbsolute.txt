@@ -1,0 +1,6 @@
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\MODEL\bin\Debug\MODEL.dll
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\MODEL\bin\Debug\MODEL.pdb
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\MODEL\obj\Debug\MODEL.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\MODEL\obj\Debug\MODEL.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\MODEL\obj\Debug\MODEL.dll
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\MODEL\obj\Debug\MODEL.pdb

@@ -1,0 +1,17 @@
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\bin\Debug\SQL_NTP.exe.config
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\bin\Debug\SQL_NTP.exe
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\bin\Debug\SQL_NTP.pdb
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\obj\Debug\SQL_NTP.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\obj\Debug\SQL_NTP.Form1.resources
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\obj\Debug\SQL_NTP.Properties.Resources.resources
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\obj\Debug\SQL_NTP.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\obj\Debug\SQL_NTP.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\obj\Debug\SQL_NTP.exe
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\obj\Debug\SQL_NTP.pdb
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\bin\Debug\BLL.dll
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\bin\Debug\MODEL.dll
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\bin\Debug\DAL.dll
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\bin\Debug\BLL.pdb
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\bin\Debug\MODEL.pdb
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\bin\Debug\DAL.pdb
+C:\Users\HP\Desktop\III.-\NTP-II\SQL_NTP\SQL_NTP\obj\Debug\SQL_NTP.csproj.CopyComplete
