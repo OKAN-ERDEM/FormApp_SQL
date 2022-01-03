@@ -1,4 +1,4 @@
-﻿using BLL;
+using BLL;
 using MODEL;
 using System;
 using System.Collections.Generic;
@@ -53,10 +53,7 @@ namespace SQL_NTP
             #endregion
 
             OgrenciBL obl = new OgrenciBL();
-            obl.OgrenciEkle(new Ogrenci { Ad = txtAd.Text, Soyad = txtSoyad.Text, Numara = txtNumara.Text, Sinif_ID = (int)cmbSiniflar.SelectedValue, TC_No = txtTC.Text });
-
-
-                        
+            obl.OgrenciEkle(new Ogrenci { Ad = txtAd.Text, Soyad = txtSoyad.Text, Numara = txtNumara.Text, Sinif_ID = (int)cmbSiniflar.SelectedValue, TC_No = txtTC.Text });                        
 
         }
         //DON'T Repeat Yourself
@@ -97,7 +94,6 @@ namespace SQL_NTP
                 dr.Close();
 
 
-
             }
             catch (Exception)
             {
@@ -112,33 +108,52 @@ namespace SQL_NTP
             }
         }
 
+        /*
+         Garbage Collector:
+         çöp toplayıcısı; işi biten nesneleri toplar.(Başka yerlere ulaşan nesneler hariç)
+         base interface'lerinden bir tanesi Idisposable olanı toplamaz.
+         */
+        //Interfaceler classları zorlar.
+        //bir classın base interface'lerinde Idisposable varsa class türetilirken using kullanmalıyız.
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             SqlConnection cn = null;
             try
             {
-                cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cstr"].ConnectionString);
-                if (cn != null)
+                using (cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cstr"].ConnectionString))
                 {
-                    cn.Open();
-                }
-                SqlCommand cmd = new SqlCommand($"Select Sinif_ID,SinifAd,Kontenjan from Sinif", cn);
+                    if (cn != null)
+                    {
+                        cn.Open();
+                    }
+                    SqlCommand cmd = new SqlCommand($"Select Sinif_ID,SinifAd,Kontenjan from Sinif", cn);
 
-                SqlDataReader dr = cmd.ExecuteReader();
+                    SqlDataReader dr = cmd.ExecuteReader();
 
-                List<Sinif> siniflar = new List<Sinif>();
+                    List<Sinif> siniflar = new List<Sinif>();
 
-                while (dr.Read())
-                {
-                    siniflar.Add(new Sinif { Kontenjan = Convert.ToInt32(dr["Kontenjan"]), SinifAd = dr["SinifAd"].ToString(), Sinif_ID = Convert.ToInt32(dr["Sinif_ID"]) });
-                }
+                    foreach (Sinif item in siniflar)
+                    {
+                        MessageBox.Show(item.SinifAd);
+                    }
 
-                dr.Close();
+                    while (dr.Read())
+                    {
+                        siniflar.Add(new Sinif { Kontenjan = Convert.ToInt32(dr["Kontenjan"]), SinifAd = dr["SinifAd"].ToString(), Sinif_ID = Convert.ToInt32(dr["Sinif_ID"]) });
+                    }
 
-                cmbSiniflar.DisplayMember = "SinifAd";
-                cmbSiniflar.ValueMember = "Sinif_ID";
-                cmbSiniflar.DataSource = siniflar;
+                    dr.Close();
+
+                    cmbSiniflar.DisplayMember = "SinifAd";
+                    cmbSiniflar.ValueMember = "Sinif_ID";
+                    cmbSiniflar.DataSource = siniflar;
+                }      
+                 
             }
+
             catch (Exception)
             {
                 throw;
@@ -148,8 +163,9 @@ namespace SQL_NTP
                 if (cn != null && cn.State != ConnectionState.Closed)
                 {//nullcheck
                     cn.Close();
+                    cn.Dispose();
                 }
             }
         }
-    }
+    }    
 }
